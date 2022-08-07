@@ -11,6 +11,8 @@ f4(x) =  (x3 - x4 )^{2}
 
 F(x) [ f1 , f2, f3 , f4]
 
+A similar example is given in http://ceres-solver.org/nnls_tutorial.html#powell-s-function
+
 */
 
 #include "ceres/ceres.h"
@@ -22,6 +24,7 @@ using ceres::Solve;
 using ceres::Solver;
 
 
+// Declaration of the Multi Variable Functions 
 
 struct f1 {
   template <typename T>
@@ -71,12 +74,11 @@ int main(int argc, char** argv) {
 
   Problem problem;
 
-  // Add residual terms to the problem using the autodiff
-  // wrapper to get the derivatives automatically.
-
+  // Initilize AutoDiff to the residual terms. 
 
   problem.AddResidualBlock(
-  	new AutoDiffCostFunction<f1, 1, 1, 1>(new f1), nullptr, &x1, &x2);  // the < f1,1,1 > indicates that the function f1 has two inputs each of 1 dimension scalar and output is 1 dimension scalar
+  	new AutoDiffCostFunction<f1, 1, 1, 1>(new f1), nullptr, &x1, &x2);  
+  // the < f1,1,1 > indicates that the function f1 has two inputs each of 1 dimension scalar and output is 1 dimension scalar
 
   problem.AddResidualBlock(
   	new AutoDiffCostFunction<f2, 1, 1, 1>(new f2), nullptr, &x2, &x3);

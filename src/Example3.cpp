@@ -1,8 +1,20 @@
 /*
 
-This is an illustrative code  
 The objective of this code is to introduce the readers to the structure
-in which the program is be written for the BA
+in which the program is be written to solve for the Bundle Adjustment.
+
+
+What is different from the previus programs ?
+
+In Bundle Adjustment there would be two parameters, a predicted value and an
+observed value. The state is to be updated the difference between the predictions 
+and observations is minimized. (Unlike the prevous code where the objective was
+to minimize an anlytical cost function).
+
+So how do we structure the program such that residual takes in predicted and observed measurments
+and returns the updated state. 
+
+Consider a simple example with an identiy state transition. 
 
 */
 
@@ -39,7 +51,6 @@ struct Sample_BA_1D {
 
   double observed_x;
 };
-
 
 
 
