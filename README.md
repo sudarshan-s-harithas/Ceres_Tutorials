@@ -40,5 +40,3 @@ Run the following commands from the **Ceres_ws** directory.
 ***
 
 
-
-
