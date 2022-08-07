@@ -10,6 +10,7 @@ It consists of three simple examples.
 
 **Example3.cpp** explanins the structure of the program, that can be followed to implement Bundle Adjustment. 
 
+Please check the ***g2o_tutorials*** branch for the excercies on g2o. 
 
 ## Setup and Installation Instructions 
 
