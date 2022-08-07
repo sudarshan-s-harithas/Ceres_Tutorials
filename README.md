@@ -16,27 +16,27 @@ It consists of three simple examples.
 1. Install [ROS](http://wiki.ros.org/noetic/Installation) (We encourage students to setup their programs as a ROS package). 
 2. Create a workspace
 ```
-* mkdir Ceres_ws
-* cd Ceres_ws
-* mkdir src
-* catkin_make
+mkdir Ceres_ws
+cd Ceres_ws
+mkdir src
+catkin_make
 ```
 3. Follow Instructions [Here](http://ceres-solver.org/installation.html) to install Ceres Solver. 
 4. Installation and Running the package
 ```
-* cd src
-* git clone https://github.com/sudarshan-s-harithas/Ceres_Tutorials.git
-* catkin_make 
+cd src
+git clone https://github.com/sudarshan-s-harithas/Ceres_Tutorials.git
+catkin_make 
 ```
 5. Execution of the Program
 
 Run the following commands from the **Ceres_ws** directory. 
 
 ```
-* source devel/setup.bash
-* rosrun ceres_tutorials Ceres_example1
-* rosrun ceres_tutorials Ceres_example2
-* rosrun ceres_tutorials Ceres_example3
+source devel/setup.bash
+rosrun ceres_tutorials Ceres_example1
+rosrun ceres_tutorials Ceres_example2
+rosrun ceres_tutorials Ceres_example3
 ```
 
 
